@@ -16,13 +16,18 @@ class HighScores: UITableViewController {
     
     //MARK: Outlets
     
-    
+    var tester = true
     override func viewDidLoad() {
         super.viewDidLoad()
         getHighScores()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        if tester {
+            let test = DataInterface()
+        test.addHighScore(name: "Test", score: 5)
+        getHighScores()
+            tester = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,18 +63,19 @@ class HighScores: UITableViewController {
         highScores = []
         //get file contents into a string
         let dataInterface: DataInterface = DataInterface()
-        scores = dataInterface.readHighScores()
+        scores = dataInterface.readFile(file: "high_scores")
         // split string into high score entries
-        let scoresArr = scores.split(separator:"\n")
+        let scoresArr = scores.split(separator: "\n")
         // for each score entry split that into name and score and add to the
         // highScores tuple array
         for score in scoresArr
         {
-            var splitScore = score.split(separator:":")
+            var splitScore = score.split(separator: "\n")
             highScores.append((name:String(splitScore[0]), score:Int(splitScore[1])!))
         }
         // sort the array by score
         highScores.sort(by: {$0.score < $1.score})
+        viewDidLoad()
     }
 
     
