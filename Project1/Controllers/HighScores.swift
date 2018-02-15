@@ -19,7 +19,7 @@ class HighScores: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        readInHighScores()
+        getHighScores()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -32,7 +32,7 @@ class HighScores: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        readInHighScores()
+        getHighScores()
     }
 
     
@@ -48,35 +48,28 @@ class HighScores: UITableViewController {
     }
     
     
-    func readInHighScores()
+    /*
+        Uses the data interface to read in the high scores from the high score file as a string and
+        manipulates the string and extracts the data and places it into the highScores tuple array
+    */
+    func getHighScores()
     {
         let scores: String
         highScores = []
-        // get file asset path
-        if let filepath = Bundle.main.path(forResource: "high_scores", ofType: "txt")
+        //get file contents into a string
+        let dataInterface: DataInterface = DataInterface()
+        scores = dataInterface.readHighScores()
+        // split string into high score entries
+        let scoresArr = scores.split(separator:"\n")
+        // for each score entry split that into name and score and add to the
+        // highScores tuple array
+        for score in scoresArr
         {
-            do
-            {
-                // read contents of file into a string
-                scores = try String(contentsOfFile: filepath)
-                // split string into high score entries
-                let scoresArr = scores.split(separator:"\n")
-                // for each score entry split that into name and score and add to the 
-                // highScores tuple array
-                for score in scoresArr
-                {
-                    var splitScore = score.split(separator:":")
-                    highScores.append((name:String(splitScore[0]), score:Int(splitScore[1])!))
-                }
-                // sort the array by score
-                highScores.sort(by: {$0.score < $1.score})
-            }
-            catch
-            {
-                // contents could not be loaded
-                print("ERROR::Could not load file")
-            }
+            var splitScore = score.split(separator:":")
+            highScores.append((name:String(splitScore[0]), score:Int(splitScore[1])!))
         }
+        // sort the array by score
+        highScores.sort(by: {$0.score < $1.score})
     }
 
 

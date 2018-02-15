@@ -16,6 +16,7 @@
 		7A89671320361D7500A80BA3 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89670E20361D7500A80BA3 /* MainMenuViewController.swift */; };
 		7A89671420361D7500A80BA3 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89670F20361D7500A80BA3 /* QuizzViewController.swift */; };
 		7A89671D20361F8C00A80BA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A89671B20361F8C00A80BA3 /* Main.storyboard */; };
+		7A89671F2036268F00A80BA3 /* DataInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89671E2036268F00A80BA3 /* DataInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7A89670E20361D7500A80BA3 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		7A89670F20361D7500A80BA3 /* QuizzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
 		7A89671C20361F8C00A80BA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A89671E2036268F00A80BA3 /* DataInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				7A89670C20361D7500A80BA3 /* high_scores.txt */,
+				7A89671E2036268F00A80BA3 /* DataInterface.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A89671320361D7500A80BA3 /* MainMenuViewController.swift in Sources */,
+				7A89671F2036268F00A80BA3 /* DataInterface.swift in Sources */,
 				7A89671220361D7500A80BA3 /* HighScoresViewCell.swift in Sources */,
 				7A89671020361D7500A80BA3 /* HighScores.swift in Sources */,
 				7A8966ED203619BE00A80BA3 /* AppDelegate.swift in Sources */,
