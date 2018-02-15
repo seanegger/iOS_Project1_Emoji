@@ -49,8 +49,8 @@ class HighScores: UITableViewController {
     
     
     /*
-        Uses the data interface to read in the high scores from the high score file as a string and
-        manipulates the string and extracts the data and places it into the highScores tuple array
+    Uses the data interface to read in the high scores from the high score file as a string and
+    manipulates the string and extracts the data and places it into the highScores tuple array
     */
     func getHighScores()
     {
@@ -72,7 +72,10 @@ class HighScores: UITableViewController {
         highScores.sort(by: {$0.score < $1.score})
     }
 
-
+    
+    /*
+     Populates 
+    */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "highScoreCell", for: indexPath) as? HighScoresViewCell else
         {
