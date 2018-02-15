@@ -10,13 +10,17 @@ import UIKit
 
 class QuizzViewController: UIViewController {
 
+    //MARK: Instance Variables
+    var emoji_category: String = ""
+    
+    
     //MARK: Outlets
     @IBOutlet weak var emoji: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

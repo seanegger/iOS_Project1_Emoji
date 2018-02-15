@@ -58,7 +58,7 @@ class HighScores: UITableViewController {
         highScores = []
         //get file contents into a string
         let dataInterface: DataInterface = DataInterface()
-        scores = dataInterface.readHighScores()
+        scores = dataInterface.readHighScores()//readFile("high_scores.txt")
         // split string into high score entries
         let scoresArr = scores.split(separator:"\n")
         // for each score entry split that into name and score and add to the

@@ -72,7 +72,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="ulN-O4-fIi" kind="show" id="2Lp-hA-6Cg"/>
+                                    <action selector="playButton1:" destination="9pv-A4-QxB" eventType="touchUpInside" id="rQf-iv-Oyf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIf-SK-MJu">
@@ -95,6 +95,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButton2:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zXW-m2-odq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ip-VZ-RV7">
                                 <rect key="frame" x="59" y="463" width="37" height="21"/>
@@ -116,6 +119,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButton3:" destination="9pv-A4-QxB" eventType="touchUpInside" id="U3v-bN-ywX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Questions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgv-e8-il9">
                                 <rect key="frame" x="103.5" y="518" width="168" height="21"/>
@@ -131,6 +137,11 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dQX-bv-zxH">
                                 <rect key="frame" x="140" y="576" width="94" height="29"/>
+                                <color key="backgroundColor" red="1" green="0.57516719949999995" blue="0.1843193994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="numQuestionsStepperPressed:" destination="9pv-A4-QxB" eventType="valueChanged" id="YK1-NI-cz7"/>
+                                </connections>
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -164,6 +175,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="tabBarItem:acW-dT-cKf:image" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="cat1Label" destination="UBs-qh-vR2" id="RnJ-Xz-A00"/>
+                        <outlet property="cat2Label" destination="ZIf-SK-MJu" id="s6A-uP-elR"/>
+                        <outlet property="cat3Label" destination="8Ip-VZ-RV7" id="Ufp-fg-oM6"/>
+                        <outlet property="numQuestionsLabel" destination="i0r-bq-hfw" id="kTG-CT-Nho"/>
+                        <outlet property="numQuestionsStepper" destination="dQX-bv-zxH" id="yIc-CW-KlR"/>
+                        <segue destination="ulN-O4-fIi" kind="show" identifier="playQuiz" id="wpy-dw-lpQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -435,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wba-Pm-mf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="-402.54872563718146"/>
+            <point key="canvasLocation" x="1460" y="-402"/>
         </scene>
         <!--Item-->
         <scene sceneID="eZl-Me-WwW">
