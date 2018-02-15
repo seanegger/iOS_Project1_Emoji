@@ -10,24 +10,24 @@ import Foundation
 
 class DataInterface
 {
-
-    func readHighScores() -> String
+    
+    func readFile(file: String) -> String
     {
-        if let filepath = Bundle.main.path(forResource: "high_scores", ofType: "txt")
+        var result = ""
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         {
+            let fileURL = dir.appendingPathComponent("\(file).txt")
             do
             {
-                // read contents of file into a string
-                let scores: String = try String(contentsOfFile: filepath)
-                //return string
-                return scores
+                result = try String(contentsOf: fileURL, encoding: .utf8)
             }
             catch
             {
-                fatalError("ERROR::FILE_ERROR::Could not read highscores file")
+                fatalError("ERROR::FILE_ERROR::Could not write to highscores file")
             }
+            
         }
-        fatalError("ERROR::FILE_ERROR::Could not load highscore file")
+        return result
     }
 
     /*
@@ -37,20 +37,35 @@ class DataInterface
     */
     func addHighScore(name:String, score:Int)
     {
-        
+        let fileName = "high_scores"
+        let result = "\(readFile(file: fileName))\(name) : \(score)\n"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        {
+            let fileURL = dir.appendingPathComponent("\(fileName).txt")
+            do
+            {
+                try result.write(to: fileURL, atomically: false, encoding: .utf8)
+            }
+            catch
+            {
+                fatalError("ERROR::FILE_ERROR::Could not write to highscores file")
+            }
+       
+        }
     }
-
+            
     /*
      Description: Reads the emoji data file and collects the different categories.
      It reads each category as a string and stores each category in a string
      array, then returns the string array
      Return: A string array where each element is a emoji quiz category
-    */
+     */
     func readEmojiCategories() -> [String]
     {
-        return []
+        let name = "emoji_quiz_data_category"
+        return returnArrayFromFile(fileName: "\(name)")
     }
-
+    
     
     /*
      Description: Reads the emoji data file and collects the questions from a
@@ -59,9 +74,18 @@ class DataInterface
      Parameter category: The category to retrieve questions from
      Return: The string array where each element is an emoji quiz question as
      a string
-    */
+     */
     func readEmojiQuestions(category:String) -> [String]
     {
-        return []
+        let base = "emoji_quiz_data_"
+        return returnArrayFromFile(fileName: "\(base)\(category)")
+        
+    }
+    
+    func returnArrayFromFile(fileName: String) -> [String]
+    {
+        let result = "\readFile(file: \(fileName))"
+        return result.components(separatedBy: "\n")
     }
 }
+
