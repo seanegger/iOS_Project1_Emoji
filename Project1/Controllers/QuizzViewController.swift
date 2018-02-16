@@ -43,6 +43,7 @@ class QuizzViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emoji.text = ""
         // Do any additional setup after loading the view.
         //create hearts list
         hearts.append(heart1)
@@ -130,12 +131,17 @@ class QuizzViewController: UIViewController {
      Description: Increments the current question index and sets the new question
      and answer. Animates this change.
     */
+ 
     func nextQuestion()
     {
         //increment index
         currentQuestionIndex += 1
         //animate the change of emoji
         emoji.text = emojiQuestionAnswer[currentQuestionIndex].question
+        emoji.alpha = 0;
+        [UIView .animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations:{self.emoji.alpha=1;}, completion: nil)];
+
+       
         //set the new answer
         answer = emojiQuestionAnswer[currentQuestionIndex].answer
         for character in Array(answer)
