@@ -26,26 +26,6 @@ class DataInterface
     
     
     
-    
-    func readFile(file: String) -> String
-    {
-        var result = ""
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        {
-            let fileURL = dir.appendingPathComponent("\(file).txt")
-            do
-            {
-                result = try String(contentsOf: fileURL, encoding: .utf8)
-            }
-            catch
-            {
-                fatalError("ERROR::FILE_ERROR::Could not write to highscores file")
-            }
-            
-        }
-        return result
-    }
-    
     /*
      Description: Opens the high_scores.txt file and writes a new high score to it.
      Parameter name: The high score name to add
