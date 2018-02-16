@@ -204,6 +204,9 @@ class QuizzViewController: UIViewController {
     */
     func checkForCompletion()
     {
+        print("Checking for completion")
+        print("Current word: ", answer)
+        print("Correct Guesses: ", correctGuesses)
         //check if word is complete
         if(correctGuesses == answer.count)
         {
@@ -239,7 +242,6 @@ class QuizzViewController: UIViewController {
         emoji.text = emojiQuestionAnswer[currentQuestionIndex].question
         emoji.alpha = 0;
         [UIView .animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations:{self.emoji.alpha=1;}, completion: nil)];
-
         //set the new answer
         answer = emojiQuestionAnswer[currentQuestionIndex].answer
         // set up the empty letter spot labels
@@ -249,6 +251,8 @@ class QuizzViewController: UIViewController {
             if(character == " ")
             {
                 letterSpots[index].isHidden = true
+                //increment correct guesses to account for spaces
+                correctGuesses += 1
             }
             else
             {
