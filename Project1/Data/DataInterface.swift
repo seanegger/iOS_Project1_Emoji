@@ -79,7 +79,6 @@ class DataInterface
         for i in result.allKeys{
             toReturn.append(i as! String)
         }
-        print(toReturn)
         return toReturn
     }
     

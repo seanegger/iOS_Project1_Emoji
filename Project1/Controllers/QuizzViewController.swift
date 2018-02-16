@@ -246,7 +246,6 @@ class QuizzViewController: UIViewController {
         for (index, character) in (Array(answer).enumerated())
         {
             //if its a space make it hidden. If not set it to _
-            print("character: ", character)
             if(character == " ")
             {
                 letterSpots[index].isHidden = true
