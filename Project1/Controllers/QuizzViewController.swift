@@ -157,8 +157,18 @@ class QuizzViewController: UIViewController {
     */
     func gameOver()
     {
-        //present the popup to enter name into the highscore database
-        performSegue(withIdentifier: "enterNameSegue", sender: score)
+        var titleMessage: String = "You Win!"
+        if(numStrikes == 3)
+        {
+            titleMessage = "Game Over..."
+        }
+        let message: String = "Enter your name to record your score in the high score database"
+        //create the alert
+        let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addTextField()
+        alert.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.cancel, handler: {action in            self.addToHighScores(name: alert.textFields![0].text!)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -207,5 +217,15 @@ class QuizzViewController: UIViewController {
             }
         }
     }
+    
+    /*
+     Adds the players name and score to the high scores list
+    */
+    func addToHighScores(name: String)
+    {
+        let dataInterface: DataInterface = DataInterface()
+        dataInterface.addHighScore(name: name, score: score)
+    }
+    
     
 }
