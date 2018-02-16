@@ -16,6 +16,7 @@ class MainMenuViewController: UIViewController {
      allows the new VC to know what category has been selected
      */
     let playQuizSegueIdentifier: String = "playQuiz"
+    
     @IBAction func playButton1(_ sender: Any) {
         performSegue(withIdentifier: playQuizSegueIdentifier, sender: cat1Label.text)
     }
