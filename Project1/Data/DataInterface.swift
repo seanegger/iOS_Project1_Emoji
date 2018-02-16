@@ -10,15 +10,15 @@ import Foundation
 class DataInterface
 {
     
-    func readPropertyList(fileName : String) -> NSDictionary{
-        print(fileName)
+    func readPropertyList(fileName : String) -> NSMutableDictionary{
         if let path = Bundle.main.path(forResource: "\(fileName)", ofType: "plist")
-        {return NSDictionary(contentsOfFile: path)!}
+        { return NSMutableDictionary(contentsOfFile: path)!
+       }
         else{
             print(Bundle.main.path(forResource: "\(fileName)", ofType: "plist", inDirectory: "*"))
             print("ERROR::FILE_ERROR::Could not read property list")
             
-            return NSDictionary()
+            return NSMutableDictionary()
         }
         
         
@@ -53,21 +53,36 @@ class DataInterface
      */
     func addHighScore(name:String, score:Int)
     {
-        let fileName = "high_scores"
-        let result = "\(readFile(file: fileName))\(name) : \(score)\n"
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        var toAppend = [String: Int]()
+        let result = readPropertyList(fileName: "highscores")
+        for i in result.allKeys{
+            let tempArray = result.value(forKey: i as! String)
+            print(tempArray)
+            toAppend[i as! String] = (tempArray as! Int)
+        }
+        toAppend[name] = score
+        print(toAppend[name])
+        print(toAppend.keys)
+        if let path = Bundle.main.path(forResource: "highscores", ofType: "plist")
         {
-            let fileURL = dir.appendingPathComponent("\(fileName).txt")
-            do
-            {
-                try result.write(to: fileURL, atomically: false, encoding: .utf8)
+            print("here")
+            do{
+
+            let plistContent = NSMutableDictionary(dictionary: toAppend)
+            
+            let success : Bool = plistContent.write(toFile: path, atomically: true)
+            if success {
+                print("yay")
             }
-            catch
-            {
-                fatalError("ERROR::FILE_ERROR::Could not write to highscores file")
-            }
+            else {
+                print("Oh no")
+                }}
+        }
+        else{
+            print("ERROR::FILE_ERROR::Could not write to property list")
             
         }
+        
     }
     
     /*
