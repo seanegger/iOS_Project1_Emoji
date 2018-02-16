@@ -19,6 +19,7 @@ class QuizzViewController: UIViewController {
     var score: Int = 0
     var answer:String = ""
     var incompleteAnswer: String = ""
+    var hearts: [UIImageView] = []
     
     
     //MARK: Outlets
@@ -28,8 +29,13 @@ class QuizzViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var heart1: UIImageView!
+    @IBOutlet weak var heart2: UIImageView!
+    @IBOutlet weak var heart3: UIImageView!
+    
     //MARK: Custom Keyboard
     @IBAction func customKeyBoardPress(_ sender: UIButton) {
+        sender.isHidden = true
         guessLetter(button: sender.currentTitle!)
     }
     
@@ -38,6 +44,10 @@ class QuizzViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //create hearts list
+        hearts.append(heart1)
+        hearts.append(heart2)
+        hearts.append(heart3)
         //create data interface
         let dataInterface: DataInterface = DataInterface()
         //load in questions
@@ -48,6 +58,7 @@ class QuizzViewController: UIViewController {
         super.viewDidAppear(animated)
         //If user goes back they need to start again
         numStrikes = 0
+        updateHearts()
         score = 0
         scoreLabel.text = String(score)
         currentQuestionIndex = -1 // set this to number 1 so next question increments to the first question
@@ -104,6 +115,7 @@ class QuizzViewController: UIViewController {
         else
         {
             numStrikes += 1
+            updateHearts()
             if (numStrikes == 3)
             {
                 gameOver()
@@ -147,6 +159,53 @@ class QuizzViewController: UIViewController {
     {
         //present the popup to enter name into the highscore database
         performSegue(withIdentifier: "enterNameSegue", sender: score)
+    }
+    
+    
+    /*
+     Small function just to update the heart UIImages to make sure the correct amount of hearts are displayed
+     NOTE: Innefeccient implementation consider revising
+    */
+    func updateHearts()
+    {
+        var numHiddenHearts: Int = 0
+        for heart in hearts
+        {
+            if heart.isHidden
+            {
+                numHiddenHearts += 1
+            }
+        }
+        if numHiddenHearts < numStrikes
+        {
+            for heart in hearts
+            {
+                if !heart.isHidden
+                {
+                    heart.isHidden = true
+                    numHiddenHearts += 1
+                }
+                if numHiddenHearts >= numStrikes
+                {
+                    break
+                }
+            }
+            if numHiddenHearts > numStrikes
+            {
+                for heart in hearts
+                {
+                    if heart.isHidden
+                    {
+                        heart.isHidden = false
+                        numHiddenHearts -= 1
+                    }
+                    if numHiddenHearts <= numStrikes
+                    {
+                        break
+                    }
+                }
+            }
+        }
     }
     
 }
