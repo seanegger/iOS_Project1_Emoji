@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>Rugby</key>
-        <array>
-            <string>1F3C9</string>
-        </array>
-        <key>Football</key>
-        <array>
-            <string>1F9B6</string>
-            <string>26BD</string>
-        </array>
-        <key>Snowboard</key>
-        <array>
-            <string>1F328</string>
-            <string>1F3C4</string>
-        </array>
-        <key>Biking</key>
-        <array>
-            <string>1F590</string>
-            <string>1F451</string>
-        </array>
-        <key>Soccer</key>
-        <array>
-            <string>1F9E6</string>
-            <string>2640</string>
-        </array>
-    </dict>
+<dict>
+	<key>Rugby</key>
+	<array>
+		<string>🏉</string>
+	</array>
+	<key>Football</key>
+	<array>
+		<string>👣</string>
+		<string>⚽</string>
+	</array>
+	<key>Snowboard</key>
+	<array>
+		<string>🌨️</string>
+		<string>🏄</string>
+	</array>
+	<key>Biking</key>
+	<array>
+		<string>🖐️</string>
+		<string>👑</string>
+	</array>
+	<key>Basketball</key>
+	<array>
+		<string>🏀</string>
+	</array>
+</dict>
 </plist>

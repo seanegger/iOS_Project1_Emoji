@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>Hot Dog</key>
-        <array>
-            <string>🔥</string>
-            <string>🐕</string>
-        </array>
-        <key>Eggplant</key>
-        <array>
-            <string>🥚</string>
-            <string>🌻</string>
-        </array>
-        <key>Cheesecake</key>
-        <array>
-            <string>🧀</string>
-            <string>🍰</string>
-        </array>
-        <key>Croissant</key>
-        <array>
-            <string>❌</string>
-            <string>🐜</string>
-        </array>
-        <key>Pork Chop</key>
-        <array>
-            <string>🐷</string>
-            <string>👋</string>
-        </array>
-    </dict>
+<dict>
+	<key>Hot Dog</key>
+	<array>
+		<string>🔥</string>
+		<string>🐕</string>
+	</array>
+	<key>Eggplant</key>
+	<array>
+		<string>🥚</string>
+		<string>🌻</string>
+	</array>
+	<key>Cheesecake</key>
+	<array>
+		<string>🧀</string>
+		<string>🍰</string>
+	</array>
+	<key>Croissant</key>
+	<array>
+		<string>❌</string>
+		<string>🐜</string>
+	</array>
+	<key>Pork Chop</key>
+	<array>
+		<string>🐷</string>
+		<string>👋</string>
+	</array>
+</dict>
 </plist>
