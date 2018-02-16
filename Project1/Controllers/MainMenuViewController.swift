@@ -21,11 +21,11 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func playButton2(_ sender: Any) {
-        performSegue(withIdentifier: playQuizSegueIdentifier, sender: cat1Label.text)
+        performSegue(withIdentifier: playQuizSegueIdentifier, sender: cat2Label.text)
     }
     
     @IBAction func playButton3(_ sender: Any) {
-        performSegue(withIdentifier: playQuizSegueIdentifier, sender: cat1Label.text)
+        performSegue(withIdentifier: playQuizSegueIdentifier, sender: cat3Label.text)
     }
     
     
@@ -60,9 +60,9 @@ class MainMenuViewController: UIViewController {
         let dataInterface: DataInterface = DataInterface()
         //get categories and setup categories
         let categories: [String] = dataInterface.readEmojiCategories()
-        //cat1Label.text = categories[0]
-        //cat2Label.text = categories[0]
-        //qcat3Label.text = categories[0]
+        cat1Label.text = categories[0]
+        cat2Label.text = categories[1]
+        cat3Label.text = categories[2]
         
     }
 

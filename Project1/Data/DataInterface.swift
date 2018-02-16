@@ -5,11 +5,27 @@
 //  Created by Egger, Sean on 2/15/18.
 //  Copyright © 2018 Egger, Sean. All rights reserved.
 //
-
 import Foundation
 
 class DataInterface
 {
+    
+    func readPropertyList(fileName : String) -> NSDictionary{
+        print(fileName)
+        if let path = Bundle.main.path(forResource: "\(fileName)", ofType: "plist")
+        {return NSDictionary(contentsOfFile: path)!}
+        else{
+            print(Bundle.main.path(forResource: "\(fileName)", ofType: "plist", inDirectory: "*"))
+            print("ERROR::FILE_ERROR::Could not read property list")
+            
+            return NSDictionary()
+        }
+        
+        
+    }
+    
+    
+    
     
     func readFile(file: String) -> String
     {
@@ -29,12 +45,12 @@ class DataInterface
         }
         return result
     }
-
+    
     /*
      Description: Opens the high_scores.txt file and writes a new high score to it.
      Parameter name: The high score name to add
      Parameter score: The score of the player to add
-    */
+     */
     func addHighScore(name:String, score:Int)
     {
         let fileName = "high_scores"
@@ -50,10 +66,10 @@ class DataInterface
             {
                 fatalError("ERROR::FILE_ERROR::Could not write to highscores file")
             }
-       
+            
         }
     }
-            
+    
     /*
      Description: Reads the emoji data file and collects the different categories.
      It reads each category as a string and stores each category in a string
@@ -62,8 +78,14 @@ class DataInterface
      */
     func readEmojiCategories() -> [String]
     {
-        let name = "emoji_quiz_data_category"
-        return returnArrayFromFile(fileName: "\(name)")
+        var toReturn : [String] = []
+        let result = readPropertyList(fileName: "Category")
+        
+        for i in result.allKeys{
+            toReturn.append(i as! String)
+        }
+        print(toReturn)
+        return toReturn
     }
     
     
@@ -77,15 +99,19 @@ class DataInterface
      */
     func readEmojiQuestions(category:String) -> [(question:String, answer:String)]
     {
-        let base = "emoji_quiz_data_"
-        return returnArrayFromFile(fileName: "\(base)\(category)")
+        var toReturn : [(String, String)] = []
+        let result = readPropertyList(fileName: "\(category)")
+        for i in result.allKeys {
+            let tempArray = result.value(forKey: i as! String) as! Array<Any>
+            var part2 = ""
+            for j in tempArray{
+                part2 = "\(part2) \\u{\(j)}"
+            }
+            toReturn.append((" \(part2)", i as! String ))
+        }
+        return toReturn
         
     }
     
-    func returnArrayFromFile(fileName: String) -> [String]
-    {
-        let result = "\readFile(file: \(fileName))"
-        return result.components(separatedBy: "\n")
-    }
+    
 }
-

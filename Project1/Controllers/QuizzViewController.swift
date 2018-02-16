@@ -26,8 +26,9 @@ class QuizzViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     
-    //MARK: Custom Keyboard
+    @IBOutlet weak var scoreLabel: UILabel!
     
+    //MARK: Custom Keyboard
     @IBAction func customKeyBoardPress(_ sender: UIButton) {
         guessLetter(button: sender.currentTitle!)
     }
@@ -48,6 +49,7 @@ class QuizzViewController: UIViewController {
         //If user goes back they need to start again
         numStrikes = 0
         score = 0
+        scoreLabel.text = String(score)
         currentQuestionIndex = -1 // set this to number 1 so next question increments to the first question
         nextQuestion()
     }
@@ -72,21 +74,20 @@ class QuizzViewController: UIViewController {
             //if it is fill in the characters
             let answerChars = Array(answer)
             var incompleteAnswerChars = Array(incompleteAnswer)
-            var goodGuess: Bool = false
             for (index,char) in answerChars.enumerated()
             {
                 if (char == letter)
                 {
                     // reveal that letter in the incomplete answer
                     incompleteAnswerChars[index] = letter
-                    // set that the user does not get a strike
-                    goodGuess = true
                 }
             }
             incompleteAnswer = String(incompleteAnswerChars)
             //check if word is complete
             if(incompleteAnswer == answer)
             {
+                //increment score
+                score += 1
                 //is that the last question
                 if(currentQuestionIndex == numQuestions - 1)
                 {
@@ -98,15 +99,14 @@ class QuizzViewController: UIViewController {
                     nextQuestion()
                 }
             }
-            // check if user gets a strike
-            else if(goodGuess == false)
+        }
+        //letter is not in answer
+        else
+        {
+            numStrikes += 1
+            if (numStrikes == 3)
             {
-                numStrikes += 1
-                // check if user has struck out
-                if (numStrikes == 3)
-                {
-                    gameOver()
-                }
+                gameOver()
             }
         }
     }
@@ -148,4 +148,5 @@ class QuizzViewController: UIViewController {
         //present the popup to enter name into the highscore database
         performSegue(withIdentifier: "enterNameSegue", sender: score)
     }
+    
 }
