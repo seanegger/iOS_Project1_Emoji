@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>IPhone</key>
-        <array>
-            <string>👁</string>
-            <string>📞</string>
-        </array>
-        <key>Bureau</key>
-        <array>
-            <string>👻</string>
-            <string>🚣</string>
-        </array>
-        <key>Electric Car</key>
-        <array>
-            <string>⌁</string>
-            <string>🏎</string>
-        </array>
-        <key>Train of Thought</key>
-        <array>
-            <string>🚆</string>
-            <string>💭</string>
-        </array>
-        <key>Poker Face</key>
-        <array>
-            <string>🂠</string>
-            <string>🌝</string>
-        </array>
-    </dict>
+<dict>
+	<key>IPhone</key>
+	<array>
+		<string>👁</string>
+		<string>📞</string>
+	</array>
+	<key>Bureau</key>
+	<array>
+		<string>👻</string>
+		<string>🚣</string>
+	</array>
+	<key>Electric Car</key>
+	<array>
+		<string>⌁</string>
+		<string>🏎</string>
+	</array>
+	<key>Poker Face</key>
+	<array>
+		<string>🂠</string>
+		<string>🌝</string>
+	</array>
+</dict>
 </plist>
