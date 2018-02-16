@@ -105,7 +105,7 @@ class DataInterface
             let tempArray = result.value(forKey: i as! String) as! Array<Any>
             var part2 = ""
             for j in tempArray{
-                part2 = "\(part2) \\u{\(j)}"
+                part2 = "\(part2) \(j)"
             }
             toReturn.append((" \(part2)", i as! String ))
         }
