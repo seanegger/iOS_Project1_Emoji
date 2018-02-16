@@ -90,6 +90,8 @@ class QuizzViewController: UIViewController {
                 if (char == letter)
                 {
                     // reveal that letter in the incomplete answer
+                    print("Correct Letter Clicked")
+                    print(letter)
                     incompleteAnswerChars[index] = letter
                 }
             }
