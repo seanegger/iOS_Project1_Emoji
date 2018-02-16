@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5833FD9B2036B55B00F94A80 /* highscores.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5833FD9A2036B55B00F94A80 /* highscores.plist */; };
-		5833FD9D2036CC0700F94A80 /* app-29.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5833FD9C2036CC0700F94A80 /* app-29.wav */; };
 		7A837D492036982400FEB7E9 /* Category.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D482036982400FEB7E9 /* Category.plist */; };
 		7A837D4D2036982D00FEB7E9 /* Food.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D4A2036982D00FEB7E9 /* Food.plist */; };
 		7A837D4E2036982D00FEB7E9 /* Random.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D4B2036982D00FEB7E9 /* Random.plist */; };
@@ -23,12 +22,10 @@
 		7A89671420361D7500A80BA3 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89670F20361D7500A80BA3 /* QuizzViewController.swift */; };
 		7A89671D20361F8C00A80BA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A89671B20361F8C00A80BA3 /* Main.storyboard */; };
 		7A89671F2036268F00A80BA3 /* DataInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A89671E2036268F00A80BA3 /* DataInterface.swift */; };
-		7A89672120362E9000A80BA3 /* emoji_quiz_data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7A89672020362E9000A80BA3 /* emoji_quiz_data.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5833FD9A2036B55B00F94A80 /* highscores.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = highscores.plist; sourceTree = "<group>"; };
-		5833FD9C2036CC0700F94A80 /* app-29.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "app-29.wav"; path = "../../../../Downloads/app-29.wav"; sourceTree = "<group>"; };
 		7A837D482036982400FEB7E9 /* Category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Category.plist; sourceTree = "<group>"; };
 		7A837D4A2036982D00FEB7E9 /* Food.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Food.plist; sourceTree = "<group>"; };
 		7A837D4B2036982D00FEB7E9 /* Random.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Random.plist; sourceTree = "<group>"; };
@@ -45,7 +42,6 @@
 		7A89670F20361D7500A80BA3 /* QuizzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
 		7A89671C20361F8C00A80BA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A89671E2036268F00A80BA3 /* DataInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInterface.swift; sourceTree = "<group>"; };
-		7A89672020362E9000A80BA3 /* emoji_quiz_data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = emoji_quiz_data.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +76,6 @@
 			children = (
 				7A8966EC203619BE00A80BA3 /* AppDelegate.swift */,
 				7A8966F3203619BE00A80BA3 /* Assets.xcassets */,
-				5833FD9C2036CC0700F94A80 /* app-29.wav */,
 				7A89671820361DD500A80BA3 /* Controllers */,
 				7A89671A20361DF600A80BA3 /* Data */,
 				7A89671920361DE400A80BA3 /* StoryBoard */,
@@ -118,7 +113,6 @@
 				7A837D482036982400FEB7E9 /* Category.plist */,
 				7A89670C20361D7500A80BA3 /* high_scores.txt */,
 				7A89671E2036268F00A80BA3 /* DataInterface.swift */,
-				7A89672020362E9000A80BA3 /* emoji_quiz_data.txt */,
 				5833FD9A2036B55B00F94A80 /* highscores.plist */,
 			);
 			path = Data;
@@ -186,8 +180,6 @@
 				7A837D4D2036982D00FEB7E9 /* Food.plist in Resources */,
 				7A8966F7203619BE00A80BA3 /* LaunchScreen.storyboard in Resources */,
 				7A8966F4203619BE00A80BA3 /* Assets.xcassets in Resources */,
-				5833FD9D2036CC0700F94A80 /* app-29.wav in Resources */,
-				7A89672120362E9000A80BA3 /* emoji_quiz_data.txt in Resources */,
 				7A89671120361D7500A80BA3 /* high_scores.txt in Resources */,
 				7A837D492036982400FEB7E9 /* Category.plist in Resources */,
 				7A837D4F2036982D00FEB7E9 /* Sports.plist in Resources */,
