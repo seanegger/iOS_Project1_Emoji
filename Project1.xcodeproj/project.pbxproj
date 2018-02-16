@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5833FD9B2036B55B00F94A80 /* highscores.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5833FD9A2036B55B00F94A80 /* highscores.plist */; };
 		7A837D492036982400FEB7E9 /* Category.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D482036982400FEB7E9 /* Category.plist */; };
 		7A837D4D2036982D00FEB7E9 /* Food.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D4A2036982D00FEB7E9 /* Food.plist */; };
 		7A837D4E2036982D00FEB7E9 /* Random.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D4B2036982D00FEB7E9 /* Random.plist */; };
 		7A837D4F2036982D00FEB7E9 /* Sports.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D4C2036982D00FEB7E9 /* Sports.plist */; };
+		7A837D52203702E800FEB7E9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A837D51203702E800FEB7E9 /* AVFoundation.framework */; };
+		7A837D58203707E500FEB7E9 /* error_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D57203707E500FEB7E9 /* error_sound.mp3 */; };
+		7A837D5A203708BD00FEB7E9 /* win_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A837D59203708BD00FEB7E9 /* win_sound.wav */; };
 		7A8966ED203619BE00A80BA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8966EC203619BE00A80BA3 /* AppDelegate.swift */; };
 		7A8966F4203619BE00A80BA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8966F3203619BE00A80BA3 /* Assets.xcassets */; };
 		7A8966F7203619BE00A80BA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8966F5203619BE00A80BA3 /* LaunchScreen.storyboard */; };
@@ -25,11 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5833FD9A2036B55B00F94A80 /* highscores.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = highscores.plist; sourceTree = "<group>"; };
 		7A837D482036982400FEB7E9 /* Category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Category.plist; sourceTree = "<group>"; };
 		7A837D4A2036982D00FEB7E9 /* Food.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Food.plist; sourceTree = "<group>"; };
 		7A837D4B2036982D00FEB7E9 /* Random.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Random.plist; sourceTree = "<group>"; };
 		7A837D4C2036982D00FEB7E9 /* Sports.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sports.plist; sourceTree = "<group>"; };
+		7A837D51203702E800FEB7E9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7A837D57203707E500FEB7E9 /* error_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error_sound.mp3; sourceTree = "<group>"; };
+		7A837D59203708BD00FEB7E9 /* win_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win_sound.wav; sourceTree = "<group>"; };
 		7A8966E9203619BE00A80BA3 /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8966EC203619BE00A80BA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8966F3203619BE00A80BA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,17 +53,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A837D52203702E800FEB7E9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A837D50203702E800FEB7E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A837D51203702E800FEB7E9 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A8966E0203619BE00A80BA3 = {
 			isa = PBXGroup;
 			children = (
 				7A8966EB203619BE00A80BA3 /* Project1 */,
 				7A8966EA203619BE00A80BA3 /* Products */,
+				7A837D50203702E800FEB7E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,13 +121,14 @@
 		7A89671A20361DF600A80BA3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7A837D59203708BD00FEB7E9 /* win_sound.wav */,
+				7A837D57203707E500FEB7E9 /* error_sound.mp3 */,
 				7A837D4A2036982D00FEB7E9 /* Food.plist */,
 				7A837D4B2036982D00FEB7E9 /* Random.plist */,
 				7A837D4C2036982D00FEB7E9 /* Sports.plist */,
 				7A837D482036982400FEB7E9 /* Category.plist */,
 				7A89670C20361D7500A80BA3 /* high_scores.txt */,
 				7A89671E2036268F00A80BA3 /* DataInterface.swift */,
-				5833FD9A2036B55B00F94A80 /* highscores.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -181,9 +196,10 @@
 				7A8966F7203619BE00A80BA3 /* LaunchScreen.storyboard in Resources */,
 				7A8966F4203619BE00A80BA3 /* Assets.xcassets in Resources */,
 				7A89671120361D7500A80BA3 /* high_scores.txt in Resources */,
+				7A837D58203707E500FEB7E9 /* error_sound.mp3 in Resources */,
+				7A837D5A203708BD00FEB7E9 /* win_sound.wav in Resources */,
 				7A837D492036982400FEB7E9 /* Category.plist in Resources */,
 				7A837D4F2036982D00FEB7E9 /* Sports.plist in Resources */,
-				5833FD9B2036B55B00F94A80 /* highscores.plist in Resources */,
 				7A89671D20361F8C00A80BA3 /* Main.storyboard in Resources */,
 				7A837D4E2036982D00FEB7E9 /* Random.plist in Resources */,
 			);
@@ -338,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -352,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

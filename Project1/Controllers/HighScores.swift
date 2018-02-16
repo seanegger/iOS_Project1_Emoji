@@ -15,19 +15,15 @@ class HighScores: UITableViewController {
     var highScores: [(name:String, score:Int)] = []
     
     //MARK: Outlets
-    
-    var tester = true
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        getHighScores()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-//        if tester {
-//            let test = DataInterface()
-//        test.addHighScore(name: "Test", score: 5)
-//        getHighScores()
-//            tester = false
-//        }
+        highScores = []
+        //create data interface object
+        let dataInterface: DataInterface = DataInterface()
+        //retrieve high scores
+        highScores = dataInterface.getHighScores()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +33,10 @@ class HighScores: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        getHighScores()
+        let dataInterface: DataInterface = DataInterface()
+        highScores = dataInterface.getHighScores()
+        self.tableView.reloadData()
+        
     }
 
     
@@ -52,35 +51,8 @@ class HighScores: UITableViewController {
         return highScores.count + 1
     }
     
-    
     /*
-    Uses the data interface to read in the high scores from the high score file as a string and
-    manipulates the string and extracts the data and places it into the highScores tuple array
-    */
-    func getHighScores()
-    {
-        let scores: String
-        highScores = []
-        //get file contents into a string
-        let dataInterface: DataInterface = DataInterface()
-        //scores = dataInterface.readFile(file: "high_scores")
-        // split string into high score entries
-//        let scoresArr = scores.split(separator: "\n")
-//        // for each score entry split that into name and score and add to the
-//        // highScores tuple array
-//        for score in scoresArr
-//        {
-//            var splitScore = score.split(separator: "\n")
-//            highScores.append((name:String(splitScore[0]), score:Int(splitScore[1])!))
-//        }
-//        // sort the array by score
-//        highScores.sort(by: {$0.score < $1.score})
-//        viewDidLoad()
-    }
-
-    
-    /*
-     Populates 
+     Populates  the table view cell
     */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "highScoreCell", for: indexPath) as? HighScoresViewCell else

@@ -7,6 +7,25 @@
 //
 
 import UIKit
+import AVFoundation
+
+//Implemented by David Kopec
+// A derivative of the Fisher-Yates algorithm to shuffle an array
+extension Array {
+    public func shuffled() -> Array<Element> {
+        var shuffledArray = self // value semantics (Array is Struct) makes this a copy
+        if count < 2 { return shuffledArray } // already shuffled
+        for i in (1..<count).reversed() { // count backwards
+            let position = Int(arc4random_uniform(UInt32(i + 1))) // random to swap
+            if i != position { // swap with the end, don't bother with self swaps
+                shuffledArray.swapAt(i, position)
+            }
+        }
+        return shuffledArray
+    }
+}
+
+
 
 class QuizzViewController: UIViewController {
 
@@ -22,6 +41,8 @@ class QuizzViewController: UIViewController {
     var hearts: [UIImageView] = []
     var letterSpots: [UILabel] = []
     var customKeybard: [UIButton] = []
+    var errorSoundPlayer: AVAudioPlayer = AVAudioPlayer()
+    var winSoundPlayer: AVAudioPlayer = AVAudioPlayer()
     
     
     //MARK: Outlets
@@ -88,7 +109,6 @@ class QuizzViewController: UIViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -141,10 +161,15 @@ class QuizzViewController: UIViewController {
         hearts.append(heart1)
         hearts.append(heart2)
         hearts.append(heart3)
+        //load in audio
+        loadAudio()
         //create data interface
         let dataInterface: DataInterface = DataInterface()
         //load in questions
         emojiQuestionAnswer = dataInterface.readEmojiQuestions(category: emoji_category)
+        // shuffle questions
+        emojiQuestionAnswer = emojiQuestionAnswer.shuffled()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -191,6 +216,7 @@ class QuizzViewController: UIViewController {
         {
             numStrikes += 1
             updateHearts()
+            errorSoundPlayer.play()
             if (numStrikes == 3)
             {
                 gameOver()
@@ -204,9 +230,6 @@ class QuizzViewController: UIViewController {
     */
     func checkForCompletion()
     {
-        print("Checking for completion")
-        print("Current word: ", answer)
-        print("Correct Guesses: ", correctGuesses)
         //check if word is complete
         if(correctGuesses == answer.count)
         {
@@ -216,6 +239,7 @@ class QuizzViewController: UIViewController {
             //is that the last question
             if(currentQuestionIndex == numQuestions - 1)
             {
+                winSoundPlayer.play()
                 gameOver()
             }
                 //if not move onto next question
@@ -289,6 +313,7 @@ class QuizzViewController: UIViewController {
         let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addTextField()
         alert.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.cancel, handler: {action in            self.addToHighScores(name: alert.textFields![0].text!)
+            self.performSegue(withIdentifier: "unwindToMenu", sender: self)
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -346,7 +371,26 @@ class QuizzViewController: UIViewController {
     func addToHighScores(name: String)
     {
         let dataInterface: DataInterface = DataInterface()
-        dataInterface.addHighScore(name: name, score: score)
+        dataInterface.storeHighScore(name: name, score: score)
+    }
+    
+    
+    /*
+     Sets the audio players to have open audio files
+    */
+    func loadAudio()
+    {
+        let errorSound = Bundle.main.path(forResource: "error_sound", ofType: "mp3")
+        let winSound = Bundle.main.path(forResource: "win_sound", ofType: "wav")
+        do
+        {
+            try errorSoundPlayer = AVAudioPlayer(contentsOf: URL (fileURLWithPath: errorSound!))
+            try winSoundPlayer = AVAudioPlayer(contentsOf: URL (fileURLWithPath: winSound!))
+        }
+        catch
+        {
+            fatalError("ERROR::MUSIC::Could not load audio file")
+        }
     }
     
     

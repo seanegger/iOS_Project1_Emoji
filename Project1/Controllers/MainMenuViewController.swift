@@ -29,6 +29,9 @@ class MainMenuViewController: UIViewController {
         performSegue(withIdentifier: playQuizSegueIdentifier, sender: cat3Label.text)
     }
     
+    //unwind segue
+    @IBAction func unwindToMenu(segue: UIStoryboardSegue){}
+    
     
     //MARK: Category Labels
     @IBOutlet weak var cat1Label: UILabel!
@@ -47,6 +50,20 @@ class MainMenuViewController: UIViewController {
     
     @IBOutlet weak var numQuestionsStepper: UIStepper!
     
+    //Segmented Control
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var segmentedLabel: UILabel!
+    @IBAction func segentedControl(_ sender: Any) {
+        if segmentedControl.selectedSegmentIndex == 0
+        {
+            segmentedLabel.text = "Off"
+        }
+        if segmentedControl.selectedSegmentIndex == 1
+        {
+            segmentedLabel.text = "On"
+        }
+    }
+    
     
     //MARK: Setup
     override func viewDidLoad() {
@@ -64,7 +81,6 @@ class MainMenuViewController: UIViewController {
         cat1Label.text = categories[0]
         cat2Label.text = categories[1]
         cat3Label.text = categories[2]
-        
     }
 
     override func didReceiveMemoryWarning() {
