@@ -2,20 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
+        <key>IPhone</key>
+        <array>
+            <string>👁</string>
+            <string>📞</string>
+        </array>
+        <key>Bureau</key>
+        <array>
+            <string>👻</string>
+            <string>🚣</string>
+        </array>
         <key>Electric Car</key>
         <array>
-            <string>1F50C</string>
-            <string>1F3CE</string>
+            <string>⌁</string>
+            <string>🏎</string>
         </array>
         <key>Train of Thought</key>
         <array>
-            <string>1F686</string>
-            <string>1F4AD</string>
+            <string>🚆</string>
+            <string>💭</string>
         </array>
         <key>Poker Face</key>
         <array>
-            <string>1F41D</string>
-            <string>1F610</string>
+            <string>🂠</string>
+            <string>🌝</string>
         </array>
     </dict>
 </plist>
