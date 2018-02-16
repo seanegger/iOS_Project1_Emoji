@@ -75,7 +75,7 @@ class DataInterface
      Return: The string array where each element is an emoji quiz question as
      a string
      */
-    func readEmojiQuestions(category:String) -> [String]
+    func readEmojiQuestions(category:String) -> [(question:String, answer:String)]
     {
         let base = "emoji_quiz_data_"
         return returnArrayFromFile(fileName: "\(base)\(category)")
