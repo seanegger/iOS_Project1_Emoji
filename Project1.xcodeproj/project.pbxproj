@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A837D472036929C00FEB7E9 /* EnterNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A837D462036929C00FEB7E9 /* EnterNameController.swift */; };
 		7A8966ED203619BE00A80BA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8966EC203619BE00A80BA3 /* AppDelegate.swift */; };
 		7A8966F4203619BE00A80BA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8966F3203619BE00A80BA3 /* Assets.xcassets */; };
 		7A8966F7203619BE00A80BA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8966F5203619BE00A80BA3 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A837D462036929C00FEB7E9 /* EnterNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameController.swift; sourceTree = "<group>"; };
 		7A8966E9203619BE00A80BA3 /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8966EC203619BE00A80BA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8966F3203619BE00A80BA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				7A89670D20361D7500A80BA3 /* HighScoresViewCell.swift */,
 				7A89670E20361D7500A80BA3 /* MainMenuViewController.swift */,
 				7A89670F20361D7500A80BA3 /* QuizzViewController.swift */,
+				7A837D462036929C00FEB7E9 /* EnterNameController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A89671320361D7500A80BA3 /* MainMenuViewController.swift in Sources */,
+				7A837D472036929C00FEB7E9 /* EnterNameController.swift in Sources */,
 				7A89671F2036268F00A80BA3 /* DataInterface.swift in Sources */,
 				7A89671220361D7500A80BA3 /* HighScoresViewCell.swift in Sources */,
 				7A89671020361D7500A80BA3 /* HighScores.swift in Sources */,

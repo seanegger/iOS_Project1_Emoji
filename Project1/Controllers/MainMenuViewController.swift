@@ -54,6 +54,8 @@ class MainMenuViewController: UIViewController {
         //setup num questions
         numQuestionsStepper.value = 3
         numQuestionsLabel.text = String(Int(numQuestionsStepper.value))
+        numQuestionsStepper.maximumValue = 5
+        numQuestionsStepper.minimumValue = 1
         //create data interface
         let dataInterface: DataInterface = DataInterface()
         //get categories and setup categories
@@ -78,6 +80,7 @@ class MainMenuViewController: UIViewController {
             var destinationViewController: QuizzViewController
             destinationViewController = segue.destination as! QuizzViewController
             destinationViewController.emoji_category = sender as! String
+            destinationViewController.numQuestions = Int(numQuestionsStepper.value)
         }
     }
 

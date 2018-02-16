@@ -45,20 +45,14 @@
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick A Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAs-z7-ThB">
-                                <rect key="frame" x="16" y="247.5" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBs-qh-vR2">
-                                <rect key="frame" x="40" y="288.5" width="34.5" height="21"/>
+                                <rect key="frame" x="40" y="281" width="34.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYE-7Z-2H3">
-                                <rect key="frame" x="289" y="284" width="70" height="30"/>
+                                <rect key="frame" x="289" y="276.5" width="70" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.57516719949999995" blue="0.1843193994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="4KD-pn-mU6"/>
@@ -76,13 +70,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIf-SK-MJu">
-                                <rect key="frame" x="39" y="339.5" width="36.5" height="21"/>
+                                <rect key="frame" x="39" y="332" width="36.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQW-Fh-FDo">
-                                <rect key="frame" x="289" y="335.5" width="70" height="30"/>
+                                <rect key="frame" x="289" y="328" width="70" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.57516719949999995" blue="0.1843193994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="AQx-52-kGJ"/>
@@ -100,13 +94,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ip-VZ-RV7">
-                                <rect key="frame" x="39" y="390.5" width="37" height="21"/>
+                                <rect key="frame" x="39" y="383" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI4-G4-NHp">
-                                <rect key="frame" x="289" y="386.5" width="70" height="30"/>
+                                <rect key="frame" x="289" y="379" width="70" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.57516719949999995" blue="0.1843193994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="bnw-4x-3fJ"/>
@@ -143,18 +137,25 @@
                                     <action selector="numQuestionsStepperPressed:" destination="9pv-A4-QxB" eventType="valueChanged" id="YK1-NI-cz7"/>
                                 </connections>
                             </stepper>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="good-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="jGe-pQ-Rn2">
+                                <rect key="frame" x="36" y="240" width="302" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="7WB-Yu-KPX"/>
+                                    <constraint firstAttribute="height" constant="1" id="nte-sk-vXY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lYE-7Z-2H3" firstAttribute="centerY" secondItem="UBs-qh-vR2" secondAttribute="centerY" id="171-r4-baR"/>
                             <constraint firstItem="pva-kf-cTz" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="1gV-de-3PF"/>
-                            <constraint firstItem="sAs-z7-ThB" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="381-up-HzW"/>
                             <constraint firstItem="pva-kf-cTz" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="3YC-ea-TZV"/>
                             <constraint firstItem="zQW-Fh-FDo" firstAttribute="centerY" secondItem="ZIf-SK-MJu" secondAttribute="centerY" id="4Wd-qc-vgd"/>
                             <constraint firstAttribute="trailing" secondItem="qI4-G4-NHp" secondAttribute="trailing" constant="16" id="4nh-ab-aV7"/>
                             <constraint firstItem="i0r-bq-hfw" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="9P3-ZI-RYs"/>
                             <constraint firstItem="8Ip-VZ-RV7" firstAttribute="centerX" secondItem="UBs-qh-vR2" secondAttribute="centerX" id="DaV-bL-p2F"/>
                             <constraint firstItem="nZ5-oN-SGk" firstAttribute="top" secondItem="u4l-lw-Ig6" secondAttribute="bottom" constant="8" id="P2H-rr-rQL"/>
+                            <constraint firstItem="jGe-pQ-Rn2" firstAttribute="top" secondItem="nZ5-oN-SGk" secondAttribute="bottom" constant="8" id="P4F-Gm-nu1"/>
                             <constraint firstItem="UBs-qh-vR2" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="40" id="Pgh-HM-jpe"/>
                             <constraint firstItem="8Ip-VZ-RV7" firstAttribute="top" secondItem="ZIf-SK-MJu" secondAttribute="bottom" constant="30" id="VlO-yi-QNz"/>
                             <constraint firstItem="qI4-G4-NHp" firstAttribute="centerY" secondItem="8Ip-VZ-RV7" secondAttribute="centerY" id="X3S-tI-8Za"/>
@@ -163,12 +164,12 @@
                             <constraint firstItem="u4l-lw-Ig6" firstAttribute="top" secondItem="pva-kf-cTz" secondAttribute="bottom" constant="8" id="aPe-b1-W7h"/>
                             <constraint firstItem="u4l-lw-Ig6" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="clI-Hb-tZF"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="dQX-bv-zxH" secondAttribute="bottom" constant="10" id="dEC-Db-lnR"/>
-                            <constraint firstItem="UBs-qh-vR2" firstAttribute="top" secondItem="sAs-z7-ThB" secondAttribute="bottom" constant="20" id="dvN-ho-CYL"/>
                             <constraint firstItem="dQX-bv-zxH" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="e3m-jO-iOI"/>
                             <constraint firstItem="ZIf-SK-MJu" firstAttribute="top" secondItem="UBs-qh-vR2" secondAttribute="bottom" constant="30" id="fcS-bM-wth"/>
                             <constraint firstItem="ZIf-SK-MJu" firstAttribute="centerX" secondItem="UBs-qh-vR2" secondAttribute="centerX" id="jMv-xr-TKP"/>
                             <constraint firstItem="kgv-e8-il9" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="pAX-Zd-Sze"/>
-                            <constraint firstItem="sAs-z7-ThB" firstAttribute="top" secondItem="nZ5-oN-SGk" secondAttribute="bottom" constant="15" id="ph3-vt-B9K"/>
+                            <constraint firstItem="jGe-pQ-Rn2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="r3l-BR-5u2"/>
+                            <constraint firstItem="UBs-qh-vR2" firstAttribute="top" secondItem="jGe-pQ-Rn2" secondAttribute="bottom" constant="40" id="vmK-5q-cul"/>
                             <constraint firstAttribute="trailing" secondItem="zQW-Fh-FDo" secondAttribute="trailing" constant="16" id="yEg-Hw-v2u"/>
                             <constraint firstItem="i0r-bq-hfw" firstAttribute="top" secondItem="kgv-e8-il9" secondAttribute="bottom" constant="8" id="yNu-HY-K5K"/>
                             <constraint firstItem="dQX-bv-zxH" firstAttribute="top" secondItem="i0r-bq-hfw" secondAttribute="bottom" constant="8" id="z3A-LF-muZ"/>
@@ -200,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Emoji Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGJ-aX-Fbq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGJ-aX-Fbq">
                                 <rect key="frame" x="84" y="113" width="217" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -229,6 +230,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="wcu-wd-T4f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBE-cF-Vrw">
                                 <rect key="frame" x="65" y="446" width="30" height="30"/>
@@ -246,6 +250,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="tPZ-p6-HHc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJJ-h3-hue">
                                 <rect key="frame" x="110" y="446" width="30" height="30"/>
@@ -263,6 +270,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="PZc-ax-v0h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruu-Nh-rJx">
                                 <rect key="frame" x="155" y="446" width="30" height="30"/>
@@ -280,6 +290,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="mUh-RJ-jZ3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcP-TJ-RCd">
                                 <rect key="frame" x="200" y="446" width="30" height="30"/>
@@ -297,6 +310,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="jvy-6p-so3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQT-SB-Vvx">
                                 <rect key="frame" x="245" y="446" width="30" height="30"/>
@@ -314,6 +330,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="rmK-ZV-x4n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sn-hs-81f">
                                 <rect key="frame" x="290" y="446" width="30" height="30"/>
@@ -331,6 +350,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="7TD-W1-Xjj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMq-yg-6LP">
                                 <rect key="frame" x="335" y="446" width="30" height="30"/>
@@ -348,6 +370,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="yi6-Hr-zbY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zd-dQ-iMY">
                                 <rect key="frame" x="27" y="494" width="30" height="30"/>
@@ -365,6 +390,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="aKe-n6-5jB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljf-bJ-rKe">
                                 <rect key="frame" x="65" y="494" width="30" height="30"/>
@@ -382,6 +410,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="4iq-fT-6Xa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPZ-cS-sWX">
                                 <rect key="frame" x="110" y="494" width="30" height="30"/>
@@ -399,6 +430,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="odh-uk-25E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsc-HI-maq">
                                 <rect key="frame" x="155" y="494" width="30" height="30"/>
@@ -416,6 +450,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="uq4-ZJ-9II"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKB-ZQ-yw4">
                                 <rect key="frame" x="200" y="494" width="30" height="30"/>
@@ -433,6 +470,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="YWu-nh-WL5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-P9-LGN">
                                 <rect key="frame" x="245" y="494" width="30" height="30"/>
@@ -450,6 +490,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="8Ri-9t-3Oq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz4-R7-LtC">
                                 <rect key="frame" x="290" y="494" width="30" height="30"/>
@@ -467,6 +510,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="HKp-m1-Ewi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ4-vV-yga">
                                 <rect key="frame" x="335" y="494" width="30" height="30"/>
@@ -484,6 +530,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="Bb3-oc-8tC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ng-7x-wUG">
                                 <rect key="frame" x="26" y="539" width="30" height="30"/>
@@ -501,6 +550,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="c9a-WC-l8E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrl-Ag-d79">
                                 <rect key="frame" x="65" y="539" width="30" height="30"/>
@@ -518,6 +570,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="8DM-kW-HKG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-4A-WyD">
                                 <rect key="frame" x="110" y="539" width="30" height="30"/>
@@ -535,6 +590,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="CWs-Ag-GIQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOT-fw-UgM">
                                 <rect key="frame" x="200" y="539" width="30" height="30"/>
@@ -552,6 +610,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="0pZ-Ca-Fon"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMb-IS-kFo">
                                 <rect key="frame" x="245" y="539" width="30" height="30"/>
@@ -569,6 +630,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="RVu-02-26B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNg-Gz-hdD">
                                 <rect key="frame" x="290" y="539" width="30" height="30"/>
@@ -586,6 +650,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="ZRM-sZ-WT4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0m-Bm-n4Y">
                                 <rect key="frame" x="335" y="539" width="30" height="30"/>
@@ -603,6 +670,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="Pj2-Qu-B1z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-UP-D3p">
                                 <rect key="frame" x="200" y="580" width="30" height="30"/>
@@ -620,6 +690,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="PmM-au-Ogy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88I-ab-34F">
                                 <rect key="frame" x="155" y="540" width="30" height="30"/>
@@ -637,6 +710,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="d7V-XF-XJm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtO-dZ-wEC">
                                 <rect key="frame" x="155" y="580" width="30" height="30"/>
@@ -654,7 +730,16 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customKeyBoardPress:" destination="ulN-O4-fIi" eventType="touchUpInside" id="aRM-kG-3e0"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PlaceHolder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7F-00-VtN">
+                                <rect key="frame" x="0.0" y="361" width="375" height="48"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -709,11 +794,13 @@
                             <constraint firstItem="2sn-hs-81f" firstAttribute="leading" secondItem="YQT-SB-Vvx" secondAttribute="trailing" constant="10" id="kQ3-Po-6HQ"/>
                             <constraint firstItem="1zd-dQ-iMY" firstAttribute="centerX" secondItem="SNM-m7-xws" secondAttribute="centerX" id="kbu-FS-ylS"/>
                             <constraint firstItem="GtO-dZ-wEC" firstAttribute="centerX" secondItem="88I-ab-34F" secondAttribute="centerX" id="lEC-QX-dNh"/>
+                            <constraint firstItem="I7F-00-VtN" firstAttribute="centerX" secondItem="J7U-21-im1" secondAttribute="centerX" id="lOz-bZ-CjX"/>
                             <constraint firstItem="fNg-Gz-hdD" firstAttribute="centerY" secondItem="0Ng-7x-wUG" secondAttribute="centerY" id="mlj-hU-PHx"/>
                             <constraint firstItem="nBE-cF-Vrw" firstAttribute="leading" secondItem="SNM-m7-xws" secondAttribute="trailing" constant="10" id="mqf-Yv-UUv"/>
                             <constraint firstItem="Lrl-Ag-d79" firstAttribute="centerY" secondItem="0Ng-7x-wUG" secondAttribute="centerY" id="myO-kA-zqz"/>
                             <constraint firstItem="qPZ-cS-sWX" firstAttribute="leading" secondItem="ljf-bJ-rKe" secondAttribute="trailing" constant="10" id="pV3-IL-LiS"/>
                             <constraint firstItem="88I-ab-34F" firstAttribute="leading" secondItem="Ja1-4A-WyD" secondAttribute="trailing" constant="10" id="pgo-i0-rB3"/>
+                            <constraint firstItem="SNM-m7-xws" firstAttribute="top" secondItem="I7F-00-VtN" secondAttribute="bottom" constant="25" id="qLW-zF-9zh"/>
                             <constraint firstItem="qPZ-cS-sWX" firstAttribute="centerY" secondItem="1zd-dQ-iMY" secondAttribute="centerY" id="qiu-4K-Vw7"/>
                             <constraint firstItem="nz4-R7-LtC" firstAttribute="centerY" secondItem="1zd-dQ-iMY" secondAttribute="centerY" id="rQZ-B5-3Ag"/>
                             <constraint firstItem="nz4-R7-LtC" firstAttribute="centerY" secondItem="1zd-dQ-iMY" secondAttribute="centerY" id="rez-a9-60e"/>
@@ -729,14 +816,44 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerLabel" destination="I7F-00-VtN" id="UW9-c6-dwv"/>
                         <outlet property="emoji" destination="zGJ-aX-Fbq" id="oQn-iE-ht6"/>
+                        <segue destination="rQV-dP-eL2" kind="presentation" identifier="enterNameSegue" modalPresentationStyle="overCurrentContext" id="5AO-jg-LgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wba-Pm-mf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2293.5999999999999" y="-402.54872563718146"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
+        <scene sceneID="qZx-jm-Y69">
+            <objects>
+                <viewController id="rQV-dP-eL2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OPb-La-QFI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ivh-EE-Gse"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVi-EN-nbO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttT-kJ-i5G">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ttT-kJ-i5G" firstAttribute="centerX" secondItem="hVi-EN-nbO" secondAttribute="centerX" id="WMu-Dx-mbZ"/>
+                            <constraint firstItem="ttT-kJ-i5G" firstAttribute="centerY" secondItem="hVi-EN-nbO" secondAttribute="centerY" id="eZG-Kn-05C"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0y-JI-p5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3103" y="-402"/>
+        </scene>
+        <!--High Scores-->
         <scene sceneID="eZl-Me-WwW">
             <objects>
                 <tableViewController id="UsG-Rf-OVm" customClass="HighScores" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
@@ -783,7 +900,7 @@
                             <outlet property="delegate" destination="UsG-Rf-OVm" id="ewy-ne-h0O"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="e4n-Dh-mzQ"/>
+                    <tabBarItem key="tabBarItem" title="High Scores" image="trophy-icon-20x22px" id="e4n-Dh-mzQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8F-ms-A9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -798,6 +915,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.57516719949999995" blue="0.1843193994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="Dr7-Ey-bjJ" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -808,11 +926,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--First-->
+        <!--Main Menu-->
         <scene sceneID="hkD-cI-o1V">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dr7-Ey-bjJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="tabBarItem:acW-dT-cKf:image" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Main Menu" image="menu-icon-20x20px" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lpt-pT-MKJ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -828,65 +946,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabBarItem:acW-dT-cKf:image" width="30" height="30">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGU1RYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcI
-ERYbHCgpKi41OT1CRUhNUFUkbnVsbNQJCgsMDQ4PEFYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVwc1dO
-U0NvbG9ygBESAMAAAIACgA/SEgkTFVpOUy5vYmplY3RzoRSAA4AO0hIJFxqiGBmABIAFgA0QANcdCR4f
-ICEiIyQlJhsbJ1ZOU1NpemVZTlNQREZEYXRhXxAQTlNDb2xvclNwYWNlTmFtZV8QGU5TSW50ZXJuYWxM
-YXlvdXREaXJlY3Rpb25fEA9OU0JpdHNQZXJTYW1wbGVcTlNDb2xvclNwYWNlgAaADIAKgAeACFh7MzAs
-IDMwfV8QGU5TQ2FsaWJyYXRlZFJHQkNvbG9yU3BhY2XSKwksLVROU0lEEAGACdIvMDEyWiRjbGFzc25h
-bWVYJGNsYXNzZXNcTlNDb2xvclNwYWNlojM0XE5TQ29sb3JTcGFjZVhOU09iamVjdNI2CTc4V05TLmRh
-dGFPEQmhJVBERi0xLjMKJcTl8uXrp/Og0MTGCjQgMCBvYmoKPDwgL0xlbmd0aCA1IDAgUiAvRmlsdGVy
-IC9GbGF0ZURlY29kZSA+PgpzdHJlYW0KeAErVAhUKFTQdy42VEguVjAAw+JkBSNTBUNThVwQbWSgZ2Jh
-amGCxABLAqWSFSz1TA1NDM2MgAq5kJSCFSQrmCLk4QrBUiCtcHOB+pAUgm3mSlbIUEjTUggEADPfH8UK
-ZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCjk1CmVuZG9iagoyIDAgb2JqCjw8IC9UeXBlIC9QYWdlIC9Q
-YXJlbnQgMyAwIFIgL1Jlc291cmNlcyA2IDAgUiAvQ29udGVudHMgNCAwIFIgPj4KZW5kb2JqCjYgMCBv
-YmoKPDwgL1Byb2NTZXQgWyAvUERGIF0gL0NvbG9yU3BhY2UgPDwgL0NzMSA3IDAgUiA+PiA+PgplbmRv
-YmoKOCAwIG9iago8PCAvTGVuZ3RoIDkgMCBSIC9OIDMgL0FsdGVybmF0ZSAvRGV2aWNlUkdCIC9GaWx0
-ZXIgL0ZsYXRlRGVjb2RlID4+CnN0cmVhbQp4AYVV32/bVBQ+iW9SpBY/IFhHh4rFr1VTW7kbGq3GBkmT
-pe1KFqXp2Cok5Do3iakbB9vptqpPe4E3BvwBQNkDD0g8IQ0GYnvZ9sC0SVOHKqpJSHvoxA8hJu0FVeG7
-dmInU8Rc9frLOd855zvnXttEPV9ptZoZVYiWq66dzySVk6cWlJ5NitKz1EsD1KvpTi2Ry80SLsEV987r
-4R2KCMvtke7+TvYjv3qL3NGJIk/AbhUdfRn4DFHM1Gu2SxS/B/v4abcG3PMc8NM2BAKrApd9nBJ40ccn
-PU4hPwmO0CrrFa0IvAY8vNhmL7dhXwMYyJPhVW4buiJmkbOtkmFyz+Evj3G3Mf8PLpt19Oxdg1j7nKW5
-Y7gPid4r9lS+iT/XtfQc8EuwX6+5SWF/BfiP+tJ8AngfUfSpkn103udHX1+tFN4G3gV70XCnC037anUx
-exwYsdH1JeuYyCM413VnErOkF4DvVvi02GPokajIU2ngYeDBSn2qmV+acVbmhN3Ls1qZzAIjj2S/p83k
-gAeAP7StvKgFzdI6NzOiFvJLV2turqlB2q6aWVEL/TKZO16PyCltu5XClB/LDrp2oRnLFkrG0ekmf61m
-emcR2tgFu54X2pCf3dLsdAYYedg/vDov5gYc213UUmK2o8BH6EREI04WLWLVqUo7pFCeMpTEvUY2PCUy
-yISFw8thMSJP0hJs3Xk5j+PHhIyyF70tolGlO8evcL/JsVg/U9kB/B9is+wwG2cTpLA32JvsCEvBOsEO
-BQpybToVKtN9KPXzvE91VBY6TlDy/EB9KIhRztnvGvrNj/6GmrBLK/QjT9AxNFvtEyAHE2h1N9I+p2tr
-P+wOPMoGu/jO7b5ra3T8cfON3Yttxzawbsa2wvjYr7Et/G1SAjtgeoqWocrwdsIJeCMdPVwB0yUN62/g
-WdDaUtqxo6Xq+YHQIybBP8g+zNK54dCq/qL+qW6oX6gX1N87aoQZO6YkfSp9K/0ofSd9L/1MinRZuiL9
-JF2VvpEuBTm7772fJdh7r19hE92KXWjVa581J1NOynvkF+WU/Lz8sjwbsBS5Xx6Tp+S98OwJ9s0M/R29
-GHQKs2pNtXst8QQYNA8lBp0G18ZUxYSrdBZZ25+TplI2yMbY9COndlyc5ZaKeDqeiidIie+LT8TH4jMC
-t568+F74JrCmA/X+kxMwOjrgbSxMJcgz4p06cVZF9Ap0m9DNXX4G3w6iSat21jbKFVfZr6qvKQl8yrgy
-XdVHhxXNNBXP5Sg2d7i9woujJL6DIo7oQd77vkV23Qxt7ltEh//CO+tWaFuoE33tEPW/GtqG8E585jOi
-iwf1ur3i56NI5AaRUzqw3/sd6Uvi3XS30XiA91XPJ0Q7Hzca/643GjtfIv8W0WXzP1kAcXgKZW5kc3Ry
-ZWFtCmVuZG9iago5IDAgb2JqCjEwNDcKZW5kb2JqCjcgMCBvYmoKWyAvSUNDQmFzZWQgOCAwIFIgXQpl
-bmRvYmoKMyAwIG9iago8PCAvVHlwZSAvUGFnZXMgL01lZGlhQm94IFswIDAgMzAgMzBdIC9Db3VudCAx
-IC9LaWRzIFsgMiAwIFIgXSA+PgplbmRvYmoKMTAgMCBvYmoKPDwgL1R5cGUgL0NhdGFsb2cgL1BhZ2Vz
-IDMgMCBSID4+CmVuZG9iagoxMSAwIG9iagooTmV3IEltYWdlKQplbmRvYmoKMTIgMCBvYmoKKE1hYyBP
-UyBYIDEwLjEwIFF1YXJ0eiBQREZDb250ZXh0KQplbmRvYmoKMTMgMCBvYmoKKEFsZXggUmFmdGlzKQpl
-bmRvYmoKMTQgMCBvYmoKKE9wYWNpdHkpCmVuZG9iagoxNSAwIG9iagooRDoyMDE0MDczMTIzMjg1MVow
-MCcwMCcpCmVuZG9iagoxIDAgb2JqCjw8IC9UaXRsZSAxMSAwIFIgL0F1dGhvciAxMyAwIFIgL1Byb2R1
-Y2VyIDEyIDAgUiAvQ3JlYXRvciAxNCAwIFIgL0NyZWF0aW9uRGF0ZQoxNSAwIFIgL01vZERhdGUgMTUg
-MCBSID4+CmVuZG9iagp4cmVmCjAgMTYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAxODY4IDAwMDAw
-IG4gCjAwMDAwMDAyMDkgMDAwMDAgbiAKMDAwMDAwMTU2MCAwMDAwMCBuIAowMDAwMDAwMDIyIDAwMDAw
-IG4gCjAwMDAwMDAxOTEgMDAwMDAgbiAKMDAwMDAwMDI4OSAwMDAwMCBuIAowMDAwMDAxNTI1IDAwMDAw
-IG4gCjAwMDAwMDAzNTcgMDAwMDAgbiAKMDAwMDAwMTUwNSAwMDAwMCBuIAowMDAwMDAxNjQxIDAwMDAw
-IG4gCjAwMDAwMDE2OTEgMDAwMDAgbiAKMDAwMDAwMTcxOSAwMDAwMCBuIAowMDAwMDAxNzcwIDAwMDAw
-IG4gCjAwMDAwMDE4MDAgMDAwMDAgbiAKMDAwMDAwMTgyNiAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXpl
-IDE2IC9Sb290IDEwIDAgUiAvSW5mbyAxIDAgUiAvSUQgWyA8YzcxOTIwYzU5MWIwMmVlMjk3YWU4M2Zj
-YjE0NmQ1NTE+CjxjNzE5MjBjNTkxYjAyZWUyOTdhZTgzZmNiMTQ2ZDU1MT4gXSA+PgpzdGFydHhyZWYK
-MTk4OAolJUVPRgqAC9IvMDo7XU5TTXV0YWJsZURhdGGjOjw0Vk5TRGF0YdIvMD4/XU5TUERGSW1hZ2VS
-ZXCjQEE0XU5TUERGSW1hZ2VSZXBaTlNJbWFnZVJlcNIvMENEV05TQXJyYXmiQzTSLzBGR15OU011dGFi
-bGVBcnJheaNGQzTTSSIJSktMV05TV2hpdGVEMCAwABADgBDSLzBOT1dOU0NvbG9yok400i8wUVJXTlNJ
-bWFnZaJRNF8QD05TS2V5ZWRBcmNoaXZlctFVVlRyb290gAEACAARABoAIwAtADIANwBMAFIAWwBiAG8A
-dgB+AIAAhQCHAIkAjgCZAJsAnQCfAKQApwCpAKsArQCvAL4AxQDPAOIA/gEQAR0BHwEhASMBJQEnATAB
-TAFRAVYBWAFaAV8BagFzAYABgwGQAZkBngGmC0sLTQtSC2ALZAtrC3ALfguCC5ALmwugC6gLqwuwC78L
-wwvKC9IL1wvZC9sL4AvoC+sL8Av4C/sMDQwQDBUAAAAAAAACAQAAAAAAAABXAAAAAAAAAAAAAAAAAAAM
-Fw
-</mutableData>
-        </image>
+        <image name="good-gradient" width="1899" height="20"/>
+        <image name="menu-icon-20x20px" width="612" height="792"/>
+        <image name="trophy-icon-20x22px" width="612" height="792"/>
     </resources>
 </document>
